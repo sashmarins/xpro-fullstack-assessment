@@ -6,7 +6,7 @@ export default class CompanyDropdown extends React.Component {
             <div className="companies">
                 <a className="companyHeader">
                     <button className="headerbtn"> 
-                        Companies 
+                    <b> Companies </b> 
                     </button>
                     <div class="companies-content">
                         <a>Meshuggah &#9660; </a>

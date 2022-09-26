@@ -14,7 +14,7 @@ code {
 
 .Sidebar {
   height: 100%;
-  background-color: aqua;
+  background-color: forestgreen;
   margin-right: 80%;
   top: 0;
   width: 225px;
@@ -57,4 +57,29 @@ code {
 
 .companies-content a:hover {
   background-color: #ddd;
+}
+
+.UserList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.UserList table {
+  border: 2px solid forestgreen;
+  width: 800px;
+}
+
+.UserList th {
+  border-bottom: 1px solid black;
+}
+
+.UserList td {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.companies hr {
+  color: forestgreen;
 }
