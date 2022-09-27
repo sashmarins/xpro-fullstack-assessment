@@ -8,12 +8,11 @@ export default class UserList extends React.Component {
             <div className="UserList">
                 <table>
                     <tr>
-                        <th>First Name</th>
                         <th>Last Name</th>
+                        <th>First Name</th>
                         <th>ID</th>
                         <th>Username</th>
                         <th>Role</th>
-                        <th>Email</th>
                         <th>Email</th>
                         <th>Phone</th>
                         <th>Address</th>
