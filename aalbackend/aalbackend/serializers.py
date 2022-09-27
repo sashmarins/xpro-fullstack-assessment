@@ -2,12 +2,12 @@ from rest_framework import serializers
 
 from .models import Clients, Users
 
-class ClientsSerializer(serializers.HyperLinkedModelSerializer):
+class ClientsSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Clients
-        fields = ('ID, COMPANY_NAME')
+        fields = ('id', 'company_name')
 
-class UsersSerializer(serializers.HyperLinkedModelSerializer):
+class UsersSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Users
-        fields = ('ID, LAST_NAME, FIRST_NAME, USERNAME, ROLE, PHONE, ADDRESS, CLIENT_ID')
+        fields = ('id', 'last_name', 'first_name', 'username', 'role', 'phone', 'address', 'client_id')
