@@ -1,5 +1,5 @@
 import './App.css';
-import Login from './components/login';
+import Login from './pages/login';
 import Sidebar from './components/sidebar';
 import UserList from './components/userList';
 
