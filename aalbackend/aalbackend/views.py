@@ -1,3 +1,4 @@
+from crypt import methods
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.decorators import action
@@ -29,3 +30,16 @@ class UsersViewSet(viewsets.ModelViewSet):
         serializer = serializers.UsersSerializer(usersList, many=True)
         data = serializer.data
         return Response(data)
+    @action(detail = False, methods=['post'], url_path="search")
+    def search(self):
+        h = 1
+    @action(detail = False, methods=['post'], url_path="login")
+    def login(self, args):
+        qs = (Users.objects.all())
+        for user in qs:
+            if (user.username == (self.request.data.get('username'))):
+                serializer = serializers.UsersSerializer(user)
+                data = serializer.data
+                return Response(data)
+        return Http404
+        # no user with a match was found
