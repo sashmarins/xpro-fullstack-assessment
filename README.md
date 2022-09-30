@@ -30,4 +30,9 @@ POST http://127.0.0.1:8000/api/users/search/ {UserSearch: (string)} will return 
 
 from my experience with django rest framework if I want to add a body to a query the method needs to be a post or else the body isn't recognized
 
-frontend instructions: navigate to the meshuggah-react directory in your terminal and run npm install, then you should be able to run npm start and access what I have for the website.
+frontend instructions: navigate to the meshuggah-react directory in your terminal and run npm install, then you should be able to run npm start and access what I have for the website, or you can access the website at https://vast-beach-28015.herokuapp.com
+to login:
+  as client: tomashaake17
+  as user: djentleman99
+  or as admin: sashmarins
+
