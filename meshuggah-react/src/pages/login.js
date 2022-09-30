@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import {loginService} from "../services/loginService"
 import { redirect, useNavigate } from "react-router";
+import * as Yup from 'yup'
 // import {useNavigate} from 'react-router-dom
 
 export default class Login extends React.Component {
@@ -9,6 +10,9 @@ export default class Login extends React.Component {
     constructor(props) {
         super(props);
 
+        if (loginService.currentUserValue) { 
+            this.props.history.push('/');
+        }
     }
 
     render () {
@@ -26,6 +30,9 @@ export default class Login extends React.Component {
                                 this.props.navigate('/')
                             );
                     }}
+                    validationSchema={Yup.object().shape({
+                        username: Yup.string().required('Username is required')
+                    })}
                     render={({ errors, touched, isSubmitting }) => (
                         <Form>
                             <h1> Login</h1>

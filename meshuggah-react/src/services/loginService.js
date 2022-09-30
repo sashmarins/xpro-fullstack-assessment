@@ -14,15 +14,19 @@ export const loginService = {
 function login(username) {
     const requestOptions = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify({username: username})
     };
 
     return fetch(`${apiUrl}/users/login/`, requestOptions)
-        .then(user => {
-            localStorage.setItem('currentUser', JSON.stringify(user));
-            currentUserSubject.next(user);
-            return user;
+        .then(user => user.json())
+        .then(jsondata => {
+            localStorage.setItem('currentUser', jsondata);
+            currentUserSubject.next(jsondata);
+        })
+        .catch(error => {
+            alert("your login is invalid")
+            return error;
         });
 }
 

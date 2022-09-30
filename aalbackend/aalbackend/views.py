@@ -55,5 +55,5 @@ class UsersViewSet(viewsets.ModelViewSet):
                 serializer = serializers.UsersSerializer(user)
                 data = serializer.data
                 return Response(data)
-        return Http404
+        # return Http404
         # no user with a match was found
