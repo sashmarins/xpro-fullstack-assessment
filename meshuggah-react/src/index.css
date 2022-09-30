@@ -21,6 +21,25 @@ code {
   position: fixed;
 }
 
+.Sidebar h1 {
+  text-align: center;
+}
+
+.navitems {
+  font-size: 20px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.homelink {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 10px;
+}
+
 .companyHeader {
   overflow: hidden;
 }
@@ -82,4 +101,17 @@ code {
 
 .companies hr {
   color: forestgreen;
+}
+
+.login {
+  display: flex;
+  text-align: center;
+  justify-content: center ;
+}
+
+.home {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
 }
