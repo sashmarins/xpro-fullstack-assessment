@@ -9,6 +9,10 @@ Steps to use:
 
 Create a MySQL database through the cli by opening the terminal and typing ``` mysql -u root -p ``` (or if you changed the login at some point to your mysql login) then run ``` CREATE DATABASE Sasha_Marinskiy ``` (or whatever you would like, but if you do change the database name you will have to change the config in the seed.py file.
 
+find the requirements.txt in the aalbackend directory and install each of the dependincies using ```pip3 install <dependency name> ```
+
+Optionally you can create a virtual environment for this specific project prior to installing the dependincies with pip3 install.
+
 Navigate to the seed.py file in the aalbackend and configure lines 3-9 to match the mysql settings on your system, and even change the database name if you'd like. 
 
 Then navigate to the directrory which holds the seed.py file in your terminal and run ``` python3 seed.py ```
