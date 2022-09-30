@@ -19,6 +19,7 @@ export default class App extends React.Component {
         isAdmin: false,
         isClient: false
     };
+
 }
 
 componentDidMount() {
@@ -35,7 +36,7 @@ componentDidMount() {
   }
 
   render() {
-    const { currentUser, isAdmin } = this.state;
+    const { currentUser } = this.state;
     return (
         <Router history={history}>
             <div>

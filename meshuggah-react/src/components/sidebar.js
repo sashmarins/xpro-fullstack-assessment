@@ -8,7 +8,7 @@ export default class Sidebar extends React.Component {
 
     logout() {
         loginService.logout();
-        history.push('/login');
+        history.go('/login');
     }
 
     render () {
