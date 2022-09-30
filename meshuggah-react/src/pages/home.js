@@ -1,5 +1,5 @@
 import React from 'react';
-
+import history from '../services/history'
 import { loginService } from '../services/loginService';
 import { userService } from '../services/userService';
 
@@ -11,6 +11,10 @@ export default class Home extends React.Component {
             currentUser: loginService.currentUserValue,
             userFromApi: null
         };
+
+        if (!loginService.currentUserValue) { 
+            history.push('/login');
+        }
     }
 
     componentDidMount() {

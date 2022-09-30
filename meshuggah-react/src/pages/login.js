@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import {loginService} from "../services/loginService"
 import { redirect, useNavigate } from "react-router";
+import history from '../services/history'
 import * as Yup from 'yup'
 // import {useNavigate} from 'react-router-dom
 
@@ -11,7 +12,7 @@ export default class Login extends React.Component {
         super(props);
 
         if (loginService.currentUserValue) { 
-            this.props.history.push('/');
+            history.push('/');
         }
     }
 
@@ -27,7 +28,7 @@ export default class Login extends React.Component {
                         setStatus();
                         loginService.login(username)
                             .then(
-                                this.props.navigate('/')
+                                history.push('/')
                             );
                     }}
                     validationSchema={Yup.object().shape({

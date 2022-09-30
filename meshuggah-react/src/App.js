@@ -19,6 +19,7 @@ export default class App extends React.Component {
         isAdmin: false,
         isClient: false
     };
+
 }
 
 componentDidMount() {

@@ -1,5 +1,5 @@
 import { BehaviorSubject } from 'rxjs';
-
+import history from '../services/history'
 const currentUserSubject = new BehaviorSubject(JSON.parse(localStorage.getItem('currentUser')));
 
 const apiUrl = "http://127.0.0.1:8000/api";
@@ -23,6 +23,7 @@ function login(username) {
         .then(jsondata => {
             localStorage.setItem('currentUser', jsondata);
             currentUserSubject.next(jsondata);
+            history.push('/')
         })
         .catch(error => {
             alert("your login is invalid")
